@@ -6,7 +6,11 @@ pipeline {
     }
 
     stages {
-
+stage('Checkout'){
+    steps{
+        git branch:'main',url:'https://github.com/chinmayiii/Mymavenapp.git'
+    }
+}
         stage('Build') {
             steps {
                 sh 'mvn clean package'
