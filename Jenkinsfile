@@ -4,11 +4,7 @@ pipeline{
     maven 'Maven'
   }
   stages{
-    stage('Checkout'){
-      steps{
-        git branch:'main',url:'https://github.com/chinmayiii/2026simplemaven.git'
-      }
-    }
+   
     stage('Build'){
       steps{
         sh 'mvn clean package'
